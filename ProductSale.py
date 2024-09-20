@@ -11,14 +11,14 @@ class Salary:
 
 
 #Class to represent inventory:
-class Product:
+class cInventory:
     def __init__(self, name, price, inventory):
         self.name = name
         self.price = price
         self.inventory = inventory
 
 # Class to represent a Sale that uses Product
-class Sale:
+class Sold:
     def __init__(self, product, quantity):
         self.product = product
         self.quantity = quantity
