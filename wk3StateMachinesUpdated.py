@@ -159,8 +159,21 @@ class VendingMachine:
 
 #Testing VendingMachine class ---------
 vending = VendingMachine()
-vending.receive_money({'dollar': 1, 'quarter': 1})
-print(vending.dispense())
+
+# Test case 1: User inserts 3 quarters
+print("Test Case 1: User inserts 3 quarters")
+vending.receive_money({'quarter': 3})
+print(vending.dispense()) 
+
+# Test case 2: User inserts 1 quarter then cancels
+print("\nTest Case 2: User inserts 1 quarter then cancels")
+vending.receive_money({'quarter': 1})
+print(vending.cancelled()) 
+
+# Test case 3: User inserts a dime and a dollar
+print("\nTest Case 3: User inserts a dime and a dollar")
+vending.receive_money({'dime': 1, 'dollar': 1})
+print(vending.dispense()) 
 
 
 
