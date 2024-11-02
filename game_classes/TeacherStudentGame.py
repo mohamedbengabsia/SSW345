@@ -1,7 +1,7 @@
 import sys
 import os
 
-# Add the specific directory to the Python path
+# Add the specific directory to the Python path // May need to update when downloading
 sys.path.append(r"C:\Users\mbeng\OneDrive\Desktop\School Files\Year 3\2024 Fall Semester\ssw345\midterm1ExtraCredit\game_classes")
 
 # Now import the classes
