@@ -1,0 +1,75 @@
+from abc import ABC, abstractmethod
+
+# Step 1: Component Interface
+class IGameMenu(ABC):
+    @abstractmethod
+    def startGame(self):
+        pass
+
+    @abstractmethod
+    def loadGame(self):
+        pass
+
+    @abstractmethod
+    def viewLeaderboard(self):
+        pass
+
+# Step 2: Concrete Component (Main Functionality)
+class MainMenu(IGameMenu):
+    def __init__(self):
+        print("Welcome to Duck Trail!")  # Welcome message at the start
+
+    def startGame(self):
+        print("Game started")
+
+    def loadGame(self):
+        print("Loading game...")
+        print("Game loaded.")
+
+    def viewLeaderboard(self):
+        print("Displaying leaderboard")
+
+# Step 3: Base Decorator Class
+class MenuDecorator(IGameMenu):
+    def __init__(self, menu: IGameMenu):
+        self._menu = menu
+
+    def startGame(self):
+        self._menu.startGame()
+
+    def loadGame(self):
+        self._menu.loadGame()
+
+    def viewLeaderboard(self):
+        self._menu.viewLeaderboard()
+
+# Step 4: Concrete Decorators
+class LoggingDecorator(MenuDecorator):
+    def startGame(self):
+        print("[LOG] Starting game...")
+        super().startGame()
+        print("[LOG] Game started.")
+
+    def loadGame(self):
+        print("[LOG] Loading game...")
+        super().loadGame()
+        print("[LOG] Game loaded.")
+
+    def viewLeaderboard(self):
+        print("[LOG] Viewing leaderboard...")
+        super().viewLeaderboard()
+        print("[LOG] Leaderboard displayed.")
+
+# Step 5: Client Code (Using Decorators)
+if __name__ == "__main__":
+    print("----- Basic Duck Trail Menu -----")
+    menu = MainMenu()
+    menu.startGame()
+    menu.loadGame()
+    menu.viewLeaderboard()
+
+    print("\n----- Duck Trail Menu with Logging -----")
+    logged_menu = LoggingDecorator(menu)
+    logged_menu.startGame()
+    logged_menu.loadGame()
+    logged_menu.viewLeaderboard()
