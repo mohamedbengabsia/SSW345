@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1741407881
+icon.svg::CompressedTexture2D::1683837060010209402::1741407881::1741407946::1::::<><>::
+README.md::TextFile::-1::1741402193::0::1::::<><>::
+::res://Astronaut/::1741407881
+Astronaut.gd::GDScript::-1::1741407881::0::1::::<>CharacterBody2D<>::
+Astronaut.tscn::PackedScene::1607628817097995867::1741407302::0::1::::<><>::res://Astronaut/Astronaut.gd<>uid://x8wsyhu3eu5o::::res://icon.svg<>uid://dj7sj0lqp0bs5::::res://MegaApple/apple.tscn
+health_bar.gd::GDScript::-1::1741407881::0::1::::<>CharacterBody2D<>::
+::res://MegaApple/::1741407881
+RedApple.png::CompressedTexture2D::7882127088199442781::1741407881::1741407946::1::::<><>::
+apple.tscn::PackedScene::7858132040791046270::1741407881::0::1::::<><>::uid://dkkfqmw25eedh::::res://MegaApple/RedApple.png<>res://MegaApple/apple.gd
+apple.gd::GDScript::-1::1741407881::0::1::::<>Area2D<>::

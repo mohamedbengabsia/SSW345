@@ -1,0 +1,5 @@
+res://Astronaut/Astronaut.tscn
+res://MegaApple/apple.tscn
+res://MegaApple/apple.gd
+res://Astronaut/health_bar.gd
+res://Astronaut/Astronaut.gd

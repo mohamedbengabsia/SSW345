@@ -1,0 +1,6 @@
+Label
+ProgressBar
+CollisionShape2D
+AnimatedSprite2D
+Area2D
+Camera2D
